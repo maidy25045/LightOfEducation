@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Light of Education - Home{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+    <div class="animated-background"></div>
+
+    <div class="home-container">
+        <h1>Welcome to Light of Education</h1>
+        <p>Learn, Practice, Succeed<i class="fa-solid fa-medal"></i></p>
+
+        <form class="search-form" action="/search" method="GET">
+        <input type="text" name="q" placeholder="Search notes, PDFs, exams..." required>
+        <button type="submit"><i class="fa-brands fa-searchengin"></i></button>
+        </form>
+        
+        <a href="/exams" class="cta-button">Start Learning</a>
+
+        <div class="student student1">
+            <img src="https://i.postimg.cc/bNyXMjV8/8848682-removebg-preview.png" alt="Student 1">
+        </div>
+        <div class="student student2">
+            <img src="https://i.postimg.cc/yYLqCr2R/414342-PDTRP3-756-removebg-preview.png" alt="Student 2">
+        </div>
+    </div>
+
+    <div class="book-floating-container" id="bookContainer"></div>
+    <canvas id="rainCanvas"></canvas>
+
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+{% endblock %}

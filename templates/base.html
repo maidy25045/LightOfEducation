@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/kMv1v8M5/photo-2025-05-17-01-14-27.jpg" />
+    <title>{% block title %}Light of Education{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="/"><img src="https://i.postimg.cc/kMv1v8M5/photo-2025-05-17-01-14-27.jpg" class="logo" alt="Logo"></a>
+                <a href="/exams">Exams</a>
+                <a href="/pdfs">PDFs</a>
+                <a href="/notes">Notes</a>
+                <a href="/leaderboard">Leaderboard</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <form class="nav-search-form" action="/search" method="GET">
+                <input type="text" name="q" placeholder="Search..." required>
+                <button type="submit"><i class="fa-brands fa-searchengin"></i></button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

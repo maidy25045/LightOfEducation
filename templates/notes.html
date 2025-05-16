@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Light of Education - Notes{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='notes.css') }}">
+
+<div class="notes-container">
+    <h1><i class="fa-regular fa-note-sticky"></i>Class Notes</h1>
+    <p>Well-organized notes to boost your preparation.</p>
+
+    <div class="note-card-grid">
+        <div class="note-card">
+            <h2>Physics 1st Paper</h2>
+            <p>Complete chapter-wise summary and formulas.</p>
+            <a href="/static/notes/physics1.pdf" target="_blank">View Notes</a>
+        </div>
+        <div class="note-card">
+            <h2>Biology Diagrams</h2>
+            <p>Important labeled diagrams for quick revision.</p>
+            <a href="/static/notes/biology_diagrams.pdf" target="_blank">View Notes</a>
+        </div>
+        <!-- Add more note cards as needed -->
+    </div>
+</div>
+{% endblock %}

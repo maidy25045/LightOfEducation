@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Light of Education - Exams{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='exams.css') }}">
+
+<div class="exams-container">
+    <h1><i class="fa-solid fa-graduation-cap"></i>Practice Exams</h1>
+    <p>Test your knowledge with Light of Education exams.</p>
+
+    <div class="exam-card-grid">
+        <div class="exam-card">
+            <h2>English Exam</h2>
+            <p>Grammar, vocabulary, comprehension and more.</p>
+            <a href="/exams/english">Start Exam</a>
+        </div>
+
+        <div class="exam-card">
+            <h2>Mathematics Exam</h2>
+            <p>Equations, algebra, geometry, and problem-solving.</p>
+            <a href="/exams/math">Start Exam</a>
+        </div>
+
+        <div class="exam-card">
+            <h2>Physics Exam</h2>
+            <p>Conceptual MCQs and formula-based questions.</p>
+            <a href="/exams/physics">Start Exam</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

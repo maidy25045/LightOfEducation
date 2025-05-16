@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Light of Education - Leaderboard{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='leaderboard.css') }}">
+
+<div class="leaderboard-container">
+    <h1><i class="fa-solid fa-ranking-star"></i>Leaderboard</h1>
+    <p>See who is leading the way!</p>
+
+    <div class="leaderboard-table-container">
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>1200</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>1100</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sam Wilson</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Alice Brown</td>
+                    <td>900</td>
+                </tr>
+                <!-- Add more leaderboard entries here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

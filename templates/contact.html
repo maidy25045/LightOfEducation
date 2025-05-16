@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Light of Education - Contact Us{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+
+<div class="contact-container">
+    <h1><i class="fa-solid fa-phone"></i>Contact Us</h1>
+    <p>We’d love to hear from you! Send us a message or reach us via social media.</p>
+
+    <div class="contact-grid">
+
+        <!-- Direct Message Form -->
+        <div class="contact-form">
+            <form action="/send-message" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="contact-social">
+            <h2>Connect with us</h2>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://whatsapp.com" target="_blank" class="whatsapp"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <a href="https://instagram.com" target="_blank" class="instagram"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://telegram.com" target="_blank" class="telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="hello.lightofeducation@gmail.com" class="email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Light of Education - Search Results{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+
+<div class="search-results-container">
+    <h1>Search Results for "{{ query }}"</h1>
+
+    {% if results %}
+        <ul class="results-list">
+            {% for item in results %}
+                <li>
+                    <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
+                    <p>{{ item.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</div>
+{% endblock %}
