@@ -1,0 +1,123 @@
+.search-container {
+    padding: 60px 40px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 0.8s ease;
+}
+
+.search-container h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #00e0ff;
+    text-shadow: 0 0 12px #00e0ffcc, 0 0 20px #00bcd4aa;
+}
+
+.search-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #cceeff;
+}
+
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.search-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 224, 255, 0.3);
+    padding: 24px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(0, 224, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.search-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 224, 255, 0.05), transparent 70%);
+    animation: rotate 6s linear infinite;
+    z-index: 0;
+}
+
+.search-card * {
+    position: relative;
+    z-index: 1;
+}
+
+.search-card h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.search-card p {
+    color: #bfeeff;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+.search-card a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #00e0ff;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-card a:hover {
+    background: #00bfff;
+    box-shadow: 0 0 20px #00e0ffcc;
+}
+
+.search-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(0, 224, 255, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .search-container h1 {
+        font-size: 2rem;
+    }
+
+    .search-container p {
+        font-size: 1rem;
+    }
+
+    .search-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .search-card p {
+        font-size: 0.95rem;
+    }
+}

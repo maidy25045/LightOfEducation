@@ -1,0 +1,150 @@
+/* General Contact Page Styling */
+.contact-container {
+    padding: 60px 40px;
+    color: #fff;
+    background: linear-gradient(145deg, #000428, #004e92);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-size: 3rem;
+    color: #00e0ff;
+    text-shadow: 0 0 10px #00e0ff;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #cceeff;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 15px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form button {
+    background: #00e0ff;
+    color: #000;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+    background: #00bfff;
+    box-shadow: 0 0 10px #00e0ff;
+}
+
+/* Social Media Section Styling */
+.contact-social {
+    max-width: 300px;
+    text-align: center;
+}
+
+.contact-social h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;  /* Allow icons to wrap to the next line */
+    justify-content: center;  /* Center the icons horizontally */
+    gap: 20px;  /* Add spacing between icons */
+}
+
+.social-icons a {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 50%;
+    color: #00e0ff;
+    font-size: 1.8rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    width: 60px;  /* Fixed width */
+    height: 60px;  /* Fixed height for perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    background: #00bfff;
+    box-shadow: 0 0 15px #00e0ff;
+}
+
+.social-icons i {
+    pointer-events: none; /* Prevent the pointer event on the icon */
+    font-size: 2rem;
+}
+
+/* Ensure that no more than 3 icons are shown per row */
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: space-around; /* Space out the icons for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        justify-content: center;  /* Center the icons on very small screens */
+    }
+}
+/* Add Hover Effects for Each Social Media Icon */
+.facebook:hover {
+    background-color: #3b5998;
+}
+
+.whatsapp:hover {
+    background-color: #25d366;
+}
+
+.instagram:hover {
+    background-color: #e1306c;
+}
+
+.linkedin:hover {
+    background-color: #0077b5;
+}
+
+.telegram:hover {
+    background-color: #0088cc;
+}
+
+.email:hover {
+    background-color: #ea4335;
+}

@@ -1,0 +1,71 @@
+/* Container for the leaderboard */
+.leaderboard-container {
+    padding: 60px 40px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(145deg, #000428, #004e92);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading for leaderboard */
+.leaderboard-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #00e0ff;
+    text-shadow: 0 0 10px #00e0ff;
+}
+
+/* Subtitle for leaderboard */
+.leaderboard-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #cceeff;
+}
+
+/* Table container */
+.leaderboard-table-container {
+    overflow-x: auto;
+}
+
+/* Styling for leaderboard table */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 0 20px #00e0ff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table header styling */
+.leaderboard-table thead {
+    background: #00e0ff;
+}
+
+.leaderboard-table th {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* Table body styling */
+.leaderboard-table tbody tr {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.leaderboard-table td {
+    padding: 12px;
+    text-align: center;
+    color: #cceeff;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #00e0ff;
+}
+
+/* Table row hover effect */
+.leaderboard-table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px #00e0ff;
+}

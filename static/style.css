@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top left, #0a0f2c, #001f3f);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    background: rgba(0, 51, 102, 0.9);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    box-shadow: 0 4px 8px rgba(0, 200, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #00e0ff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav a:hover {
+    color: #00e0ff;
+    text-shadow: 0 0 10px #00e0ff;
+}
+
+/* Logo Styling */
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 4px; /* Subtle rounding */
+    box-shadow: 0 4px 12px rgba(0, 224, 255, 0.15); /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white; /* Optional: adds a professional frame if logo has transparency */
+    padding: 2px; /* Space between image and background */
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo:hover {
+    transform: scale(1.03); /* Less aggressive zoom */
+    box-shadow: 0 6px 16px rgba(0, 224, 255, 0.3);
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-search-form input {
+        width: 130px;
+    }
+
+    .nav-search-form {
+        margin-top: 10px;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Make sure nav-container uses full width and flex properly */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap; /* prevents wrapping */
+    gap: 20px;
+    overflow-x: auto; /* avoids layout breaking */
+}
+
+/* Nav links grouped with logo */
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    flex-shrink: 1; /* allows shrinking if needed */
+}
+
+/* Search form fixed at right */
+.nav-search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0; /* don't shrink */
+    white-space: nowrap;
+}
+
+
+.nav-search-form input {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.9rem;
+    width: 180px;
+    transition: 0.3s;
+    box-shadow: 0 0 8px #00e0ff;
+}
+
+.nav-search-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-search-form input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 12px #00e0ff;
+}
+
+.nav-search-form button {
+    background: #00e0ff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00e0ff;
+}
+
+.nav-search-form button:hover {
+    background: #00bfff;
+    box-shadow: 0 0 15px #00e0ff;
+}
