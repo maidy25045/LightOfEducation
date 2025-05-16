@@ -190,3 +190,15 @@ nav {
     background: #00bfff;
     box-shadow: 0 0 15px #00e0ff;
 }
+
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    color: #04ffc9; 
+    font-size: 16px;
+}
+
+footer strong {
+    color: #a6ff00; 
+    font-weight: 600;
+}
